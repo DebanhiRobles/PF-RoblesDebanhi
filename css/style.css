@@ -10,11 +10,6 @@
     src: url(../Recursos/typos/WorkSans-VariableFont_wght.ttf);
 }
 
-@font-face {
-    font-family: 'worksans-light';
-    src: url(../Recursos/typos/WorkSans-Light.ttf);
-}
-
 /* Reseteo */
 * {
     margin: 0;
@@ -26,12 +21,6 @@
 header {
     background-color: #FBF2DF;
     height: 150px;
-
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-
 }
 
 .logo_principal {
@@ -41,19 +30,23 @@ header {
 
 
 nav ul {
-    color: darkblue;
-    font-family: Helvetica, sans-serif;
-    text-align: right;
-    font-family: 'worksans-light';
+    font-family: 'worksans-regular';
     margin: 20px;
     padding: 20px;
-
-    ;
+    
 }
 
 nav ul li {
     display: inline;
+   
+    
 }
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(173, 127, 222);
+}
+
 
 
 /* titulos  y contenido */
@@ -76,16 +69,16 @@ h3 {
 }
 
 p {
-    font-family: 'worksans-light';
+    font-family: 'worksans-regular';
     text-align: justify;
 }
 
 .volver-a {
-    font-family: 'worksans-light';
+    font-family: 'worksans-regular';
 }
 
 .ver-trailer {
-    font-family: 'worksans-light';
+    font-family: 'worksans-regular';
 }
 
 hr {
