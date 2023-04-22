@@ -19,8 +19,9 @@
 /* Barra de menu/navegacion */
 
 header {
-    background-color: #FBF2DF;
-    height: 150px;
+
+    height: 100px;
+
 }
 
 .logo_principal {
@@ -44,7 +45,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: rgb(173, 127, 222);
+    color: rgb(157, 129, 188);
 }
 
 
@@ -54,12 +55,16 @@ h1 {
     color: black;
     font-family: 'playfair-dispair';
     text-align: center;
+    font-size: 35px;
+    padding: 10px;
+    margin: 0;
 }
 
 h2 {
     color: black;
     font-family: 'worksans-regular';
     text-align: center;
+    font-size: 25px;
 }
 
 h3 {
@@ -107,7 +112,7 @@ hr {
 /* Estilos en el index */
 
 .main-index {
-    background-color: rgb(249, 244, 236);
+    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 90%);
     margin: 0;
 }
 
@@ -131,7 +136,10 @@ hr {
     text-decoration: none;
     color: darkslategrey;
 }
-
+.ver-trailer:hover {
+    color: darkolivegreen;
+    font-weight: bold;
+}
 /* tamaño de imagenes en index */
 
 .imagenes_index {
@@ -268,6 +276,12 @@ footer ul {
     text-decoration: none;
     color: rgb(158, 115, 208);
     padding: 20px;
+
+}
+
+.volver-a:hover { color: darkmagenta;
+    font-weight: bold;
+
 }
 
 footer ul li img {
@@ -276,6 +290,9 @@ footer ul li img {
 }
 
 /* Estilos en Pagina Peliculas */
+.main-peliculas { 
+    background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+}
 .peliculas-entradas {
     display: flex;
     flex-direction: column;
@@ -289,6 +306,7 @@ footer ul li img {
 }
 
 /* Estilos en Pagina Series */
+.main-series { background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);}
 .series-entradas {
     display: flex;
     flex-direction: column;
@@ -303,6 +321,7 @@ footer ul li img {
 
 
 /* Estilos en Pagina Cortos */
+.main-cortos {background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);}
 .cortos-entradas {
     display: flex;
     flex-direction: column;
@@ -319,6 +338,7 @@ footer ul li img {
 
 
 /* Estilos en contactanos */
+.main-contacto { background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);}
 .contacto-entradas {
     display: flex;
     flex-direction: column;
@@ -332,13 +352,20 @@ footer ul li img {
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
 }
 
 form input {
-    padding: 10px;
-    margin: 10px;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
 }
+
+.input:focus { 
+    background-color: #fffbf4; 
+transform: scale(1.3);}
+
+
 
 .coment-robot {
     text-align: center;
@@ -351,8 +378,14 @@ form input {
 
 @media (max-width:860px) {
 
-    header {height: 90px;}
-.navbar-toggler {padding:10px; margin: 20px;}
+    header {
+        height: 90px;
+    }
+
+    .navbar-toggler {
+        padding: 10px;
+        margin: 20px;
+    }
 
     .presentacion img {
         width: 350px;
@@ -417,9 +450,11 @@ form input {
         max-width: 250px;
     }
 
-    h3 { font-size: 15px;
-    margin: 0;
-padding: 5px;}
+    h3 {
+        font-size: 15px;
+        margin: 0;
+        padding: 5px;
+    }
 
     .logo_principal {
         width: 60px;
@@ -502,7 +537,10 @@ padding: 5px;}
         height: 200px;
     }
 
-    .peliculas-entradas {padding: 15px;}
+    .peliculas-entradas {
+        padding: 15px;
+    }
+
     .peliculas-entradas p {
         font-size: smaller;
     }
@@ -535,7 +573,10 @@ padding: 5px;}
         width: 300px;
         padding: 5px;
     }
-    .coment-robot {font-size: 9px;}
+
+    .coment-robot {
+        font-size: 9px;
+    }
 
     .container-fluid {
 
@@ -543,25 +584,39 @@ padding: 5px;}
         flex-wrap: inherit;
         align-items: center;
         justify-content: space-between;
-   color: #eee1fc; 
+        color: #e8d8fa;
 
     }
 
-    
+    @keyframes caminando { 
+
+        0% { 
+            transform: translateX(0);
+        }
+       
+        100% {transform: translateX(20px);}
+    }
+    .titulo-caminando {
+        text-align: start;
+        animation-name: caminando;
+        animation-iteration-count:initial;
+        animation-duration: 4s;
+    }
+
 }
 
 
 
 /* editando el header del bootstrap */
 .container-fluid {
-    background-color: #eee1fc;
+    background-color:rgb(249, 244, 236);
     padding: 0;
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     flex-wrap: inherit;
     align-items: center;
-    justify-content:space-between;
-   
+    justify-content: space-between;
+
 }
 
 .navbar-brand img {
@@ -577,3 +632,19 @@ padding: 5px;}
     padding: 0;
 }
 
+/* ANIMACION */
+@keyframes caminando { 
+
+    0% { 
+        transform: translateX(0);
+    }
+   
+    100% {transform: translateX(1250px);}
+}
+
+.titulo-caminando {
+    text-align: start;
+    animation-name: caminando;
+    animation-iteration-count:infinite;
+    animation-duration: 12s;
+}
