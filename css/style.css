@@ -7,7 +7,7 @@
 
 @font-face {
     font-family: 'worksans-regular';
-    src: url(../Recursos/typos/WorkSans-VariableFont_wght.ttf);
+    src: url('../Recursos/typos/WorkSans-VariableFont_wght.ttf');
 }
 
 /* Reseteo */
@@ -33,13 +33,13 @@ nav ul {
     font-family: 'worksans-regular';
     margin: 20px;
     padding: 20px;
-    
+
 }
 
 nav ul li {
     display: inline;
-   
-    
+
+
 }
 
 nav ul li a {
@@ -124,6 +124,12 @@ hr {
 .negrita {
     font-weight: bold;
     text-decoration: underline;
+}
+
+.ver-trailer {
+    font-family: 'worksans-regular';
+    text-decoration: none;
+    color: darkslategrey;
 }
 
 /* tamaño de imagenes en index */
@@ -229,8 +235,7 @@ hr {
 footer {
     background-color: #F7F5E7;
     margin: 0%;
-    text-align: center;
-    font-family: 'worksans-light';
+
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -241,6 +246,12 @@ footer {
 
 footer ul li {
     display: inline;
+    font-family: 'worksans-regular';
+}
+
+footer ul {
+    padding: 0;
+    margin: 0;
 }
 
 
@@ -248,6 +259,21 @@ footer ul li {
     width: 100px;
 }
 
+.copy-footnote {
+    font-family: 'worksans-regular';
+}
+
+.volver-a {
+    font-family: 'worksans-regular';
+    text-decoration: none;
+    color: rgb(158, 115, 208);
+    padding: 20px;
+}
+
+footer ul li img {
+    width: 35px;
+    padding: 5px;
+}
 
 /* Estilos en Pagina Peliculas */
 .peliculas-entradas {
@@ -324,6 +350,10 @@ form input {
 /* ESTRATEGIA MOBILE LAST */
 
 @media (max-width:860px) {
+
+    header {height: 90px;}
+.navbar-toggler {padding:10px; margin: 20px;}
+
     .presentacion img {
         width: 350px;
         padding: 15px;
@@ -368,8 +398,9 @@ form input {
 
 @media (max-width: 375px) {
     header {
-        background-color: rgb(240, 215, 251);
-        height: 80px;
+        background-color: rgb(210, 182, 222);
+        height: 90px;
+        max-width: 375px;
     }
 
     nav ul li {
@@ -377,20 +408,45 @@ form input {
     }
 
     h1 {
-        font-size: 18px;
+        font-size: 20px;
+        padding: 5px;
     }
 
+    h2 {
+        font-size: 15px;
+        max-width: 250px;
+    }
+
+    h3 { font-size: 15px;
+    margin: 0;
+padding: 5px;}
+
     .logo_principal {
-        width: 80px;
+        width: 60px;
         margin: 10px;
     }
 
+    .presentacion {
+        display: flex;
+        flex-direction: column;
+    }
+
     .presentacion img {
-        width: 100px;
+        width: 300px;
     }
 
     .frase_homepage {
-        font-size: 12px;
+        font-size: 15px;
+        max-width: 200px;
+    }
+
+
+    .imagenes_index {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
     }
 
     .imagenes_index img {
@@ -403,13 +459,17 @@ form input {
     }
 
     .Descripcion-pelicula {
-        font-size: smaller;
+        font-size: 12px;
         text-align: center;
+        margin: 0;
+        max-width: 250px;
     }
 
     .Descripcion-serie {
-        font-size: smaller;
+        font-size: 12px;
         text-align: center;
+        margin: 0;
+        max-width: 250px;
     }
 
     .ver-trailer {
@@ -419,8 +479,8 @@ form input {
 
     .grid-galeria {
         display: grid;
-        grid-template-columns: 200px;
-        grid-template-rows: 100px 200px 200px 200px 400px 200px;
+        grid-template-columns: 300px;
+        grid-template-rows: 50px 200px 200px 200px 400px 200px;
         padding: 25px;
         justify-items: center;
         grid-template-areas:
@@ -433,31 +493,87 @@ form input {
 
     }
 
+    .primera {
+        font-size: 20px;
+    }
+
     iframe {
         width: 300px;
         height: 200px;
     }
 
+    .peliculas-entradas {padding: 15px;}
     .peliculas-entradas p {
         font-size: smaller;
     }
 
     .volver-a {
-        font-size: smaller;
+        font-size: 12px;
+        padding: 5px;
+        text-align: justify;
     }
+
+    /* footer */
+    footer {
+        height: 80px;
+    }
+
+    .logo_footer {
+        width: 60px;
+    }
+
+    footer ul li {
+        width: 20px;
+    }
+
+    .copy-footnote {
+        font-size: x-small;
+    }
+
+    /* pagina contacto */
+    .img_willy_wonka {
+        width: 300px;
+        padding: 5px;
+    }
+    .coment-robot {font-size: 9px;}
+
+    .container-fluid {
+
+        display: flex;
+        flex-wrap: inherit;
+        align-items: center;
+        justify-content: space-between;
+   color: #eee1fc; 
+
+    }
+
+    
 }
+
+
 
 /* editando el header del bootstrap */
 .container-fluid {
-    background-color: #FBF2DF;
+    background-color: #eee1fc;
     padding: 0;
+    display: flex;
+    flex-direction:row;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content:space-between;
+   
 }
 
 .navbar-brand img {
-    width: 150px;
+    width: 100px;
     padding: 20px;
 }
 
-.nav-item {padding: 10px;}
+.nav-item {
+    padding: 10px;
+}
 
-.navbar-expand-lg { padding: 0;}
+.navbar-expand-lg {
+    padding: 0;
+}
+
