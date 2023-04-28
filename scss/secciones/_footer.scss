@@ -1,0 +1,59 @@
+/* estilos del footer */
+footer {
+    background-color: #F7F5E7;
+    margin: 0%;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    ul {
+       padding: 0;
+       margin: 0;
+    }
+    li {
+       display: inline;
+       font-family: 'worksans-regular';
+    }
+    img {
+        width: 35px;
+        padding: 5px;
+    }
+}
+
+
+
+
+.logo_footer {
+    width: 100px;
+}
+
+.copy-footnote {
+    font-family: 'worksans-regular';
+}
+
+
+/* ESTRATEGIA MOBILE LAST */
+
+
+@media (max-width: 375px) {
+  
+
+    /* footer */
+    footer {
+        height: 80px;
+    }
+
+    .logo_footer {
+        width: 60px;
+    }
+
+    footer ul li {
+        width: 20px;
+    }
+
+    .copy-footnote {
+        font-size: x-small;
+    }}

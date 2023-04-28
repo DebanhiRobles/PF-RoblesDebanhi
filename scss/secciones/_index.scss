@@ -1,0 +1,356 @@
+
+/* titulos  y contenido generales */
+h1 {
+    color: black;
+    font-family: 'playfair-dispair';
+    text-align: center;
+    font-size: 35px;
+    padding: 10px;
+    margin: 0;
+}
+
+h2 {
+    color: black;
+    font-family: 'worksans-regular';
+    text-align: center;
+    font-size: 25px;
+}
+
+h3 {
+    color: black;
+    font-family: 'worksans-regular';
+    text-align: left;
+}
+
+p {
+    font-family: 'worksans-regular';
+    text-align: justify;
+}
+
+.volver-a {
+    font-family: 'worksans-regular';
+    text-decoration: none;
+    color: rgb(158, 115, 208);
+    padding: 20px;
+    &:hover { color: darkmagenta;
+        font-weight: bold;
+    }
+}
+
+
+
+
+hr {
+    color: black;
+}
+/* Flex para primera sección del index*/
+
+.presentacion {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    img {
+        width: 600px;
+        padding: 15px;
+    }
+}
+
+
+.frase_homepage {
+    max-width: 400px;
+}
+
+/* Estilos en el index */
+
+.main-index {
+    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 90%);
+    margin: 0;
+}
+
+.Descripcion-contenido {
+    color: black;
+    padding: 5px;
+}
+
+
+.negrita {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.ver-trailer {
+    font-family: 'worksans-regular';
+    text-decoration: none;
+    color: darkslategrey;
+    &:hover {
+        color: darkolivegreen;
+        font-weight: bold;
+    }
+}
+/* tamaño de imagenes en index */
+
+.imagenes_index {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    img {
+       width: 500px;
+       padding: 20px;
+    }
+}
+
+
+/* Estilos de Grid en el Index */
+
+.grid-galeria {
+    display: grid;
+    grid-template-columns: repeat(2, 600px);
+    grid-template-rows: 100px 400px 400px 400px;
+    padding: 25px;
+
+    /* template // platilla */
+    grid-template-areas:
+        "primera primera"
+        "segunda tercera"
+        "cuarta quinta"
+        "sexta quinta"
+
+
+}
+
+.primera {
+    background-color: rgb(249, 244, 236);
+    grid-area: primera;
+    font-family: "Playfair-Dispair";
+    text-align: center;
+    font-size: 30px;
+
+}
+
+.segunda {
+   
+    grid-area: segunda;
+    img {
+        width: 600px;
+        height: 400px;
+    }
+}
+
+
+.tercera {
+   
+    grid-area: tercera;
+    overflow: hidden;
+    img {
+        width: 600px;
+        height: 400px;
+        overflow: hidden;
+    }
+}
+
+
+.cuarta {
+   
+    grid-area: cuarta;
+    overflow: hidden;
+    img {
+        width: 600px;
+        height: 400px;
+    }
+}
+
+
+.quinta {
+   
+    grid-area: quinta;
+    overflow: hidden;
+    align-items: center;
+    img {
+        width: 600px;
+        height: 800px;
+    }
+}
+
+
+.sexta {
+   
+    grid-area: sexta;
+    overflow: hidden;
+    img {
+        width: 600px;
+        height: 400px;
+        align-items: center;
+    }
+}
+
+/* ESTRATEGIA MOBILE LAST */
+
+@media (max-width:860px) {
+   
+    .presentacion img {
+        width: 350px;
+        padding: 15px;
+    }
+
+    .grid-galeria {
+
+        display: grid;
+        grid-template-columns: repeat(2, 300px);
+        grid-template-rows: 50px 200px 200px 200px;
+        padding: 20px;
+        justify-content: center;
+        img {
+            width: 300px;
+            height: 200px;
+        }
+        .quinta img {
+            width: 300px;
+            height: 400px;
+        }
+    }
+
+
+}
+
+/* ESTRATEGIA MOBILE LAST */
+
+
+@media (max-width: 375px) {
+  
+
+    h1 {
+        font-size: 20px;
+        padding: 5px;
+    }
+
+    h2 {
+        font-size: 15px;
+        max-width: 250px;
+    }
+
+    h3 {
+        font-size: 15px;
+        margin: 0;
+        padding: 5px;
+    }
+
+  
+
+    .presentacion {
+        display: flex;
+        flex-direction: column;
+        img {
+            width: 300px;
+        }
+    }
+
+
+    .frase_homepage {
+        font-size: 15px;
+        max-width: 200px;
+    }
+
+
+    .imagenes_index {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        img {
+             width: 300px;
+         }
+         h3 {
+             font-size: smaller;
+             text-align: center;
+         }
+    }
+
+
+
+    .Descripcion-contenido {
+        font-size: 12px;
+        text-align: center;
+        margin: 0;
+        max-width: 250px;
+    }
+
+    
+
+    .ver-trailer {
+        font-size: x-small;
+        text-align: center;
+    }
+
+    .grid-galeria {
+        display: grid;
+        grid-template-columns: 300px;
+        grid-template-rows: 50px 200px 200px 200px 400px 200px;
+        padding: 25px;
+        justify-items: center;
+        grid-template-areas:
+            "primera primera"
+            "segunda segunda"
+            "tercera tercera"
+            "cuarta cuarta"
+            "quinta quinta"
+            "sexta sexta"
+
+    }
+
+    .primera {
+        font-size: 20px;
+    }
+
+    iframe {
+        width: 300px;
+        height: 200px;
+    }
+
+    .peliculas-entradas {
+        padding: 15px;
+        p {
+            font-size: smaller;
+        }
+    }
+
+
+    .volver-a {
+        font-size: 12px;
+        padding: 5px;
+        text-align: justify;
+    }
+
+    @keyframes caminando { 
+
+        0% { 
+            transform: translateX(0);
+        }
+       
+        100% {transform: translateX(20px);}
+    }
+    .titulo-caminando {
+        text-align: start;
+        animation-name: caminando;
+        animation-iteration-count:initial;
+        animation-duration: 4s;
+    }}
+
+    /* ANIMACION */
+@keyframes caminando { 
+
+    0% { 
+        transform: translateX(0);
+    }
+   
+    100% {transform: translateX(1250px);}
+}
+
+.titulo-caminando {
+    text-align: start;
+    animation-name: caminando;
+    animation-iteration-count:infinite;
+    animation-duration: 12s;
+}

@@ -1,0 +1,14 @@
+/* Estilos en Pagina Peliculas */
+.main-peliculas { 
+    background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+}
+.peliculas-entradas {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 30px;
+    iframe {
+        padding: 20px;
+    }
+}

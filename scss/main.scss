@@ -1,6 +1,15 @@
-* {
-    margin: 0;
-    padding: 0;
+@import './utilidades/reseteo';
+
+/* tipografias importadas */
+
+@font-face {
+    font-family: 'Playfair-Dispair';
+    src: url('../Recursos/typos/PlayfairDisplay-Italic-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'worksans-regular';
+    src: url('../Recursos/typos/WorkSans-VariableFont_wght.ttf');
 }
 
 @import './secciones/header';
@@ -10,3 +19,37 @@
 @import './secciones/cortos';
 @import './secciones/contacto';
 @import './secciones/footer';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
