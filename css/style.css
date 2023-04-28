@@ -14,30 +14,35 @@
 
 /* Barra de menu/navegacion */
 header {
-  height: 100px; }
+  height: 50px; }
 
-nav ul {
-  font-family: 'worksans-regular';
-  margin: 20px;
-  padding: 20px; }
+nav {
+  margin: 0; }
+  nav ul {
+    font-family: 'worksans-regular';
+    margin: 20px;
+    padding: 20px; }
+  nav li {
+    display: inline; }
+  nav a {
+    text-decoration: none;
+    color: #9d81bc; }
 
-nav li {
-  display: inline; }
-
-nav a {
-  text-decoration: none;
-  color: #9d81bc; }
-
-.logo_principal {
+.navbar-brand {
   width: 100px;
   margin: 40px; }
-  .logo_principal img {
+  .navbar-brand img {
     width: 100px;
     padding: 20px; }
 
+.bg-body-tertiary {
+  padding: 0; }
+
 .container-fluid {
+  height: 100px;
   background-color: #f9f4ec;
   padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: row;
   flex-wrap: inherit;
@@ -45,8 +50,12 @@ nav a {
   justify-content: space-between; }
   .container-fluid .nav-item {
     padding: 10px; }
+    .container-fluid .nav-item:hover {
+      color: darkmagenta;
+      font-weight: bold; }
   .container-fluid .navbar-expand-lg {
-    padding: 0; }
+    padding: 0;
+    margin: 0; }
 
 /* ESTRATEGIA MOBILE LAST */
 @media (max-width: 860px) {
