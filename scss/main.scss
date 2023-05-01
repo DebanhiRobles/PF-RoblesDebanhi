@@ -1,16 +1,6 @@
 @import './utilidades/reseteo';
 
-/* tipografias importadas */
-
-@font-face {
-    font-family: 'Playfair-Dispair';
-    src: url('../Recursos/typos/PlayfairDisplay-Italic-VariableFont_wght.ttf');
-}
-
-@font-face {
-    font-family: 'worksans-regular';
-    src: url('../Recursos/typos/WorkSans-VariableFont_wght.ttf');
-}
+@import './utilidades/typos';
 
 @import './secciones/header';
 @import './secciones/index';

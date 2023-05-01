@@ -1,0 +1,13 @@
+/* tipografias importadas */
+
+@font-face {
+    font-family: 'Playfair-Dispair';
+    src: url('../Recursos/typos/PlayfairDisplay-Italic-VariableFont_wght.ttf');
+}
+$titulo:'Playfair-Dispair';
+
+@font-face {
+    font-family: 'worksans-regular';
+    src: url('../Recursos/typos/WorkSans-VariableFont_wght.ttf');
+}
+$texto: 'worksans-regular';
