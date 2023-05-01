@@ -1,11 +1,7 @@
 
 .main-contacto { background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);}
 .contacto-entradas {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-    align-items: center;
+    @extend .flex-column
 }
 
 .formulario {
@@ -19,7 +15,7 @@
        margin: 5px;
        text-align: center;
        &:focus { 
-           background-color: #fffbf4; 
+           background-color:$crema; 
        transform: scale(1.3);}
     }
 }

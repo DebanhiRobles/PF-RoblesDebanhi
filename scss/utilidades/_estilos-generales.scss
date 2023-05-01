@@ -3,7 +3,7 @@
 /* titulos  y contenido generales */
 h1 {
     color: black;
-    font-family: 'playfair-dispair';
+    font-family: $titulo;
     text-align: center;
     font-size: 35px;
     padding: 10px;
@@ -12,28 +12,25 @@ h1 {
 
 h2 {
     color: black;
-    font-family: 'worksans-regular';
     text-align: center;
     font-size: 25px;
 }
 
 h3 {
     color: black;
-    font-family: 'worksans-regular';
+
     text-align: left;
 }
 
 p {
-    font-family: 'worksans-regular';
     text-align: justify;
 }
 
 .volver-a {
-    font-family: 'worksans-regular';
     text-decoration: none;
-    color: rgb(158, 115, 208);
+    color: $lila;
     padding: 20px;
-    &:hover { color: darkmagenta;
+    &:hover { color: $lila-oscuro;
         font-weight: bold;
     }
 }

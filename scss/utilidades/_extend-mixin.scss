@@ -1,0 +1,12 @@
+
+.flex-column{
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 30px;
+    iframe {
+        padding: 20px;
+    }
+ }

@@ -1,6 +1,6 @@
 /* estilos del footer */
 footer {
-    background-color: #F7F5E7;
+    background-color: $ivory;
     margin: 0%;
 
     display: flex;
@@ -31,7 +31,7 @@ footer {
 }
 
 .copy-footnote {
-    font-family: 'worksans-regular';
+    font-family: $texto;
 }
 
 

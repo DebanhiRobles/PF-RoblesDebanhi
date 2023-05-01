@@ -1,12 +1,10 @@
 /* Estilos en Pagina Series */
 .main-series { background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);}
+
 .series-entradas {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-    padding: 30px;
-    iframe {
-       padding: 20px;
-    }
+    @extend.flex-column
+}
+
+@media (max-width: 375px) {
+    iframe { width: 300px;}
 }

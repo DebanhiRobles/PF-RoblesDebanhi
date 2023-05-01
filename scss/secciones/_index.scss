@@ -2,7 +2,7 @@
 /* titulos  y contenido generales */
 h1 {
     color: black;
-    font-family: 'playfair-dispair';
+    font-family:$titulo;
     text-align: center;
     font-size: 35px;
     padding: 10px;
@@ -11,28 +11,28 @@ h1 {
 
 h2 {
     color: black;
-    font-family: 'worksans-regular';
+    font-family: $texto;
     text-align: center;
     font-size: 25px;
 }
 
 h3 {
     color: black;
-    font-family: 'worksans-regular';
+    font-family: $texto;
     text-align: left;
 }
 
 p {
-    font-family: 'worksans-regular';
+    font-family: $texto;
     text-align: justify;
 }
 
 .volver-a {
-    font-family: 'worksans-regular';
+   
     text-decoration: none;
-    color: rgb(158, 115, 208);
+    color: $lila;
     padding: 20px;
-    &:hover { color: darkmagenta;
+    &:hover { color:$lila-oscuro;
         font-weight: bold;
     }
 }
@@ -42,8 +42,12 @@ p {
 
 hr {
     color: black;
+    
 }
 /* Flex para primera sección del index*/
+
+main {overflow-x: hidden;
+overflow-y: hidden;}
 
 .presentacion {
     display: flex;
@@ -57,7 +61,7 @@ hr {
 
 
 .frase_homepage {
-    max-width: 400px;
+    max-width: 600px;
 }
 
 /* Estilos en el index */
@@ -79,7 +83,6 @@ hr {
 }
 
 .ver-trailer {
-    font-family: 'worksans-regular';
     text-decoration: none;
     color: darkslategrey;
     &:hover {
@@ -90,11 +93,7 @@ hr {
 /* tamaño de imagenes en index */
 
 .imagenes_index {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-content: center;
-    flex-wrap: wrap;
+  @extend .flex-column;
     img {
        width: 500px;
        padding: 20px;
@@ -119,52 +118,15 @@ hr {
 
 
 }
-
-.primera {
-    background-color: rgb(249, 244, 236);
-    grid-area: primera;
-    font-family: "Playfair-Dispair";
-    text-align: center;
-    font-size: 30px;
-
-}
-
-.segunda {
-   
-    grid-area: segunda;
+.img-grid-sencilla { 
     img {
         width: 600px;
         height: 400px;
     }
-}
-
-
-.tercera {
-   
-    grid-area: tercera;
     overflow: hidden;
-    img {
-        width: 600px;
-        height: 400px;
-        overflow: hidden;
-    }
 }
 
-
-.cuarta {
-   
-    grid-area: cuarta;
-    overflow: hidden;
-    img {
-        width: 600px;
-        height: 400px;
-    }
-}
-
-
-.quinta {
-   
-    grid-area: quinta;
+.img-grid-doble {
     overflow: hidden;
     align-items: center;
     img {
@@ -172,17 +134,37 @@ hr {
         height: 800px;
     }
 }
+ 
+.primera {
+    background-color:$crema;
+    grid-area: primera;
+    font-family: $titulo;
+    text-align: center;
+    font-size: 40px;
+}
+
+.segunda {
+    grid-area: segunda;
+}
+
+
+.tercera {
+    grid-area: tercera;
+}
+
+
+.cuarta {
+    grid-area: cuarta;
+}
+
+
+.quinta {
+    grid-area: quinta;
+}
 
 
 .sexta {
-   
     grid-area: sexta;
-    overflow: hidden;
-    img {
-        width: 600px;
-        height: 400px;
-        align-items: center;
-    }
 }
 
 /* ESTRATEGIA MOBILE LAST */
@@ -304,10 +286,7 @@ hr {
         font-size: 20px;
     }
 
-    iframe {
-        width: 300px;
-        height: 200px;
-    }
+    
 
     .peliculas-entradas {
         padding: 15px;
@@ -336,6 +315,7 @@ hr {
         animation-name: caminando;
         animation-iteration-count:initial;
         animation-duration: 4s;
+       
     }}
 
     /* ANIMACION */
@@ -345,7 +325,7 @@ hr {
         transform: translateX(0);
     }
    
-    100% {transform: translateX(1250px);}
+    100% {transform: translateX(1260px);}
 }
 
 .titulo-caminando {
@@ -353,4 +333,5 @@ hr {
     animation-name: caminando;
     animation-iteration-count:infinite;
     animation-duration: 12s;
+    
 }
