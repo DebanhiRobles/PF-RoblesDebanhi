@@ -8,6 +8,39 @@
   font-family: 'worksans-regular';
   src: url("../Recursos/typos/WorkSans-VariableFont_wght.ttf"); }
 
+/* titulos  y contenido generales */
+h1 {
+  color: black;
+  font-family: "Playfair-Dispair";
+  text-align: center;
+  font-size: 35px;
+  padding: 10px;
+  margin: 0; }
+
+h2 {
+  color: black;
+  text-align: center;
+  font-size: 25px; }
+
+h3 {
+  color: black;
+  text-align: left; }
+
+p {
+  text-align: justify;
+  font-family: "worksans-regular"; }
+
+.volver-a {
+  text-decoration: none;
+  color: #9d81bc;
+  padding: 20px; }
+  .volver-a:hover {
+    color: #8b008b;
+    font-weight: bold; }
+
+hr {
+  color: black; }
+
 * {
   margin: 0;
   padding: 0;
@@ -47,7 +80,6 @@ nav {
   padding: 0; }
 
 .container-fluid {
-  height: 100px;
   background-color: #f9f4ec;
   padding: 0;
   margin: 0;
@@ -64,6 +96,8 @@ nav {
   .container-fluid .navbar-expand-lg {
     padding: 0;
     margin: 0; }
+  .container-fluid .navbar-collapse {
+    background-color: #f9f4ec; }
 
 /* ESTRATEGIA MOBILE LAST */
 @media (max-width: 860px) {
@@ -71,12 +105,10 @@ nav {
     height: 90px; }
   .navbar-toggler {
     padding: 10px;
-    margin: 20px; } }
+    margin: 10px; } }
 
 @media (max-width: 375px) {
   header {
-    background-color: #9d81bc;
-    height: 90px;
     max-width: 375px; }
     header nav ul li {
       font-size: 12px; }
@@ -90,39 +122,7 @@ nav {
     flex-wrap: inherit;
     align-items: center;
     justify-content: space-between;
-    color: #e8d8fa; } }
-
-/* titulos  y contenido generales */
-h1 {
-  color: black;
-  font-family: "Playfair-Dispair";
-  text-align: center;
-  font-size: 35px;
-  padding: 10px;
-  margin: 0; }
-
-h2 {
-  color: black;
-  font-family: "worksans-regular";
-  text-align: center;
-  font-size: 25px; }
-
-h3 {
-  color: black;
-  font-family: "worksans-regular";
-  text-align: left; }
-
-p {
-  font-family: "worksans-regular";
-  text-align: justify; }
-
-.volver-a {
-  text-decoration: none;
-  color: #9d81bc;
-  padding: 20px; }
-  .volver-a:hover {
-    color: #8b008b;
-    font-weight: bold; }
+    background-color: #e8d8fa; } }
 
 hr {
   color: black; }
@@ -212,7 +212,20 @@ main {
 .sexta {
   grid-area: sexta; }
 
-/* ESTRATEGIA MOBILE LAST */
+/* ANIMACION */
+@keyframes caminando {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(1260px); } }
+
+.titulo-caminando {
+  text-align: start;
+  animation-name: caminando;
+  animation-iteration-count: infinite;
+  animation-duration: 12s; }
+
+/* ESTRATEGIA MOBILE LAST Ipad*/
 @media (max-width: 860px) {
   .presentacion img {
     width: 350px;
@@ -230,7 +243,20 @@ main {
       width: 300px;
       height: 400px; } }
 
-/* ESTRATEGIA MOBILE LAST */
+/* ANIMACION */
+@keyframes caminando {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(860px); } }
+
+.titulo-caminando {
+  text-align: start;
+  animation-name: caminando;
+  animation-iteration-count: infinite;
+  animation-duration: 9s; }
+
+/* ESTRATEGIA MOBILE LAST  Cel*/
 @media (max-width: 375px) {
   h1 {
     font-size: 20px;
@@ -278,41 +304,20 @@ main {
     grid-template-areas: "primera primera" "segunda segunda" "tercera tercera" "cuarta cuarta" "quinta quinta" "sexta sexta"; }
   .primera {
     font-size: 20px; }
-  .peliculas-entradas {
-    padding: 15px; }
-    .peliculas-entradas p {
-      font-size: smaller; }
-  .volver-a {
-    font-size: 12px;
-    padding: 5px;
-    text-align: justify; }
   @keyframes caminando {
     0% {
       transform: translateX(0); }
     100% {
-      transform: translateX(20px); } }
+      transform: translateX(375px); } }
   .titulo-caminando {
     text-align: start;
     animation-name: caminando;
-    animation-iteration-count: initial;
-    animation-duration: 4s; } }
-
-/* ANIMACION */
-@keyframes caminando {
-  0% {
-    transform: translateX(0); }
-  100% {
-    transform: translateX(1260px); } }
-
-.titulo-caminando {
-  text-align: start;
-  animation-name: caminando;
-  animation-iteration-count: infinite;
-  animation-duration: 12s; }
+    animation-iteration-count: infinite;
+    animation-duration: 6s; } }
 
 /* Estilos en Pagina Peliculas */
 .main-peliculas {
-  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%); }
+  background-image: linear-gradient(to top, #e6e9f0 0%, #d9e7f8 100%); }
 
 @media (max-width: 375px) {
   iframe {

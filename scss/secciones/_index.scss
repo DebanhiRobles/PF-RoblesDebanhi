@@ -1,43 +1,4 @@
 
-/* titulos  y contenido generales */
-h1 {
-    color: black;
-    font-family:$titulo;
-    text-align: center;
-    font-size: 35px;
-    padding: 10px;
-    margin: 0;
-}
-
-h2 {
-    color: black;
-    font-family: $texto;
-    text-align: center;
-    font-size: 25px;
-}
-
-h3 {
-    color: black;
-    font-family: $texto;
-    text-align: left;
-}
-
-p {
-    font-family: $texto;
-    text-align: justify;
-}
-
-.volver-a {
-   
-    text-decoration: none;
-    color: $lila;
-    padding: 20px;
-    &:hover { color:$lila-oscuro;
-        font-weight: bold;
-    }
-}
-
-
 
 
 hr {
@@ -167,7 +128,24 @@ overflow-y: hidden;}
     grid-area: sexta;
 }
 
-/* ESTRATEGIA MOBILE LAST */
+
+
+    /* ANIMACION */
+    @keyframes caminando { 
+
+        0% { 
+            transform: translateX(0);
+        }
+       
+        100% {transform: translateX(1260px);}
+    }
+    
+    .titulo-caminando {
+        @include animacion (12s);
+        
+    }
+
+/* ESTRATEGIA MOBILE LAST Ipad*/
 
 @media (max-width:860px) {
    
@@ -196,7 +174,22 @@ overflow-y: hidden;}
 
 }
 
-/* ESTRATEGIA MOBILE LAST */
+    /* ANIMACION */
+    @keyframes caminando { 
+
+        0% { 
+            transform: translateX(0);
+        }
+       
+        100% {transform: translateX(860px);}
+    }
+    
+    .titulo-caminando {
+        @include animacion (9s);
+        
+    }
+
+/* ESTRATEGIA MOBILE LAST  Cel*/
 
 
 @media (max-width: 375px) {
@@ -286,21 +279,8 @@ overflow-y: hidden;}
         font-size: 20px;
     }
 
-    
-
-    .peliculas-entradas {
-        padding: 15px;
-        p {
-            font-size: smaller;
-        }
-    }
 
 
-    .volver-a {
-        font-size: 12px;
-        padding: 5px;
-        text-align: justify;
-    }
 
     @keyframes caminando { 
 
@@ -308,30 +288,11 @@ overflow-y: hidden;}
             transform: translateX(0);
         }
        
-        100% {transform: translateX(20px);}
+        100% {transform: translateX(375px);}
     }
     .titulo-caminando {
-        text-align: start;
-        animation-name: caminando;
-        animation-iteration-count:initial;
-        animation-duration: 4s;
-       
-    }}
-
-    /* ANIMACION */
-@keyframes caminando { 
-
-    0% { 
-        transform: translateX(0);
+        @include animacion (6s);
     }
-   
-    100% {transform: translateX(1260px);}
 }
 
-.titulo-caminando {
-    text-align: start;
-    animation-name: caminando;
-    animation-iteration-count:infinite;
-    animation-duration: 12s;
-    
-}
+  

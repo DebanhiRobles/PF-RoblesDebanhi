@@ -1,4 +1,4 @@
-
+//extend//
 .flex-column{
 
     display: flex;
@@ -10,3 +10,16 @@
         padding: 20px;
     }
  }
+
+//mixin//
+
+@mixin animacion ($duracion) 
+{
+    
+        text-align: start;
+        animation-name: caminando;
+        animation-iteration-count:infinite;
+        animation-duration:$duracion;
+    
+}
+

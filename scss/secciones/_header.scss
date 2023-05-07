@@ -2,20 +2,22 @@
 
 
 
-nav { 
+nav {
     margin: 0;
+
     ul {
         font-family: $texto;
         margin: 20px;
         padding: 20px;
 
-        
+
     }
-    
+
     li {
         display: inline;
 
     }
+
     a {
         text-decoration: none;
         color: $lila;
@@ -36,13 +38,16 @@ nav {
     }
 }
 
-.bg-body-tertiary { padding: 0;}
+.bg-body-tertiary {
+    padding: 0;
+  
+}
 
 .container-fluid {
-    height: 100px;
+    
     background-color: $crema;
     padding: 0;
-    margin:0;
+    margin: 0;
     display: flex;
     flex-direction: row;
     flex-wrap: inherit;
@@ -51,16 +56,26 @@ nav {
 
     .nav-item {
         padding: 10px;
-        &:hover { color:$lila-oscuro;
-            font-weight: bold;}
+
+        &:hover {
+            color: $lila-oscuro;
+            font-weight: bold;
+        }
     }
 
     .navbar-expand-lg {
         padding: 0;
-        margin:0;
+        margin: 0;
+      
+    
+    }
+    
+    .navbar-collapse {
+     
+        background-color: $crema;
+      
     }
 }
-
 
 
 /* ESTRATEGIA MOBILE LAST */
@@ -72,15 +87,15 @@ nav {
 
     .navbar-toggler {
         padding: 10px;
-        margin: 20px;
+        margin: 10px;
     }
 }
 
 
 @media (max-width: 375px) {
     header {
-        background-color: $lila;
-        height: 90px;
+    
+       
         max-width: 375px;
 
         nav ul li {
@@ -103,8 +118,10 @@ nav {
         flex-wrap: inherit;
         align-items: center;
         justify-content: space-between;
-        color:$lila-pastel;
+        background-color: $lila-pastel;
+
 
     }
+    
 
 }
