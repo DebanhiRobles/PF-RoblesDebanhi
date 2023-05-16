@@ -15,14 +15,16 @@ overflow-y: hidden;}
     align-items: center;
     padding: 20px;
     img {
-        width: 600px;
+        width: 800px;
         padding: 15px;
+        border-radius: 40px;
     }
 }
 
 
 .frase_homepage {
-    max-width: 600px;
+    max-width: 1000px;
+    
 }
 
 /* Estilos en el index */
@@ -56,8 +58,14 @@ overflow-y: hidden;}
 .imagenes_index {
   @extend .flex-column;
     img {
-       width: 500px;
+       width: 650px;
        padding: 20px;
+       border-radius: 40px;
+       &:hover {
+           scale: 1.1;
+          opacity:80%;
+       
+       }
     }
 }
 
@@ -69,6 +77,7 @@ overflow-y: hidden;}
     grid-template-columns: repeat(2, 600px);
     grid-template-rows: 100px 400px 400px 400px;
     padding: 25px;
+    justify-content: center;
 
     /* template // platilla */
     grid-template-areas:
@@ -137,7 +146,8 @@ overflow-y: hidden;}
             transform: translateX(0);
         }
        
-        100% {transform: translateX(1260px);}
+        100% {
+            transform: translateX(1920px);}
     }
     
     .titulo-caminando {
@@ -149,10 +159,19 @@ overflow-y: hidden;}
 
 @media (max-width:860px) {
    
-    .presentacion img {
-        width: 350px;
-        padding: 15px;
+    .presentacion {
+        display: flex;
+        flex-direction: column;
+        img {
+            width: 600px;
+        }
     }
+
+    .frase_homepage {
+        max-width: 350px;
+        font-size: 25px;
+    }   
+    
 
     .grid-galeria {
 
@@ -172,11 +191,9 @@ overflow-y: hidden;}
     }
 
 
-}
-
     /* ANIMACION */
     @keyframes caminando { 
-
+    
         0% { 
             transform: translateX(0);
         }
@@ -188,6 +205,8 @@ overflow-y: hidden;}
         @include animacion (9s);
         
     }
+}
+
 
 /* ESTRATEGIA MOBILE LAST  Cel*/
 
@@ -266,12 +285,12 @@ overflow-y: hidden;}
         padding: 25px;
         justify-items: center;
         grid-template-areas:
-            "primera primera"
-            "segunda segunda"
-            "tercera tercera"
-            "cuarta cuarta"
-            "quinta quinta"
-            "sexta sexta"
+        "primera primera"
+        "segunda segunda"
+        "tercera tercera"
+        "cuarta cuarta"
+        "quinta quinta"
+        "sexta sexta";
 
     }
 

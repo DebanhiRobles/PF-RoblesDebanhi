@@ -152,11 +152,12 @@ main {
   align-items: center;
   padding: 20px; }
   .presentacion img {
-    width: 600px;
-    padding: 15px; }
+    width: 800px;
+    padding: 15px;
+    border-radius: 40px; }
 
 .frase_homepage {
-  max-width: 600px; }
+  max-width: 1000px; }
 
 /* Estilos en el index */
 .main-index {
@@ -180,8 +181,12 @@ main {
 
 /* tamaño de imagenes en index */
 .imagenes_index img {
-  width: 500px;
-  padding: 20px; }
+  width: 650px;
+  padding: 20px;
+  border-radius: 40px; }
+  .imagenes_index img:hover {
+    scale: 1.1;
+    opacity: 80%; }
 
 /* Estilos de Grid en el Index */
 .grid-galeria {
@@ -189,6 +194,7 @@ main {
   grid-template-columns: repeat(2, 600px);
   grid-template-rows: 100px 400px 400px 400px;
   padding: 25px;
+  justify-content: center;
   /* template // platilla */
   grid-template-areas: "primera primera" "segunda tercera" "cuarta quinta" "sexta quinta"; }
 
@@ -232,7 +238,7 @@ main {
   0% {
     transform: translateX(0); }
   100% {
-    transform: translateX(1260px); } }
+    transform: translateX(1920px); } }
 
 .titulo-caminando {
   text-align: start;
@@ -242,9 +248,14 @@ main {
 
 /* ESTRATEGIA MOBILE LAST Ipad*/
 @media (max-width: 860px) {
-  .presentacion img {
-    width: 350px;
-    padding: 15px; }
+  .presentacion {
+    display: flex;
+    flex-direction: column; }
+    .presentacion img {
+      width: 600px; }
+  .frase_homepage {
+    max-width: 350px;
+    font-size: 25px; }
   .grid-galeria {
     display: grid;
     grid-template-columns: repeat(2, 300px);
@@ -256,20 +267,18 @@ main {
       height: 200px; }
     .grid-galeria .quinta img {
       width: 300px;
-      height: 400px; } }
-
-/* ANIMACION */
-@keyframes caminando {
-  0% {
-    transform: translateX(0); }
-  100% {
-    transform: translateX(860px); } }
-
-.titulo-caminando {
-  text-align: start;
-  animation-name: caminando;
-  animation-iteration-count: infinite;
-  animation-duration: 9s; }
+      height: 400px; }
+  /* ANIMACION */
+  @keyframes caminando {
+    0% {
+      transform: translateX(0); }
+    100% {
+      transform: translateX(860px); } }
+  .titulo-caminando {
+    text-align: start;
+    animation-name: caminando;
+    animation-iteration-count: infinite;
+    animation-duration: 9s; } }
 
 /* ESTRATEGIA MOBILE LAST  Cel*/
 @media (max-width: 375px) {
